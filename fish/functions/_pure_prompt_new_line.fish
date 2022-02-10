@@ -1,0 +1,1 @@
+/home/remix/.config/fisherman/pure/functions/_pure_prompt_new_line.fish

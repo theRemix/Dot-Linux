@@ -1,0 +1,1 @@
+/home/remix/.config/fisherman/pure/conf.d/pure.fish

@@ -1,0 +1,1 @@
+/home/remix/.config/fisherman/fnm/completions/fnm.fish

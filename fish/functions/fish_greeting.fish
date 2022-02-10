@@ -1,0 +1,1 @@
+/home/remix/.config/fisherman/pure/fish_greeting.fish
