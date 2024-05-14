@@ -1,1 +1,5 @@
-/home/remix/.config/fisherman/pure/functions/_pure_place_iterm2_prompt_mark.fish
+function _pure_place_iterm2_prompt_mark
+    if functions -q iterm2_prompt_mark
+        iterm2_prompt_mark
+    end
+end

@@ -1,1 +1,0 @@
-/home/remix/.config/fisherman/fnm//functions/npm.fish
