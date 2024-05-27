@@ -1,5 +1,5 @@
 --[[
-  __               __ __              
+  __               __ __
  |  |.--.--.---.-.|  |__|.-----.-----.
  |  ||  |  |  _  ||  |  ||     |  -__|
  |__||_____|___._||__|__||__|__|_____|
@@ -9,7 +9,16 @@ A blazing fast and easy to configure Neovim statusline written in Lua.
 See :help lualine.txt
 https://github.com/nvim-lualine/lualine.nvim
 
+Themes: https://github.com/nvim-lualine/lualine.nvim/blob/master/THEMES.md
 --]]
+
+-----------------------------------------------------------
+-- Plugins
+-----------------------------------------------------------
+table.insert(lvim.plugins,
+  { "edkolev/tmuxline.vim" }
+)
+
 local components = require("lvim.core.lualine.components")
 
 lvim.builtin.lualine.sections = {
@@ -24,3 +33,5 @@ lvim.builtin.lualine.sections = {
     components.diff,
   },
 }
+
+lvim.builtin.lualine.theme = 'material'

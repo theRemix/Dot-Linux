@@ -20,9 +20,8 @@ lvim.plugins = {
   { "onsails/lspkind-nvim" },                     -- vscode-like pictograms for neovim lsp completion items
   { "tpope/vim-surround" },                       -- quoting/parenthesizing made simple
   { "christoomey/vim-tmux-navigator" },           -- seamless navigation between tmux panes and vim splits
-
-  {                                               -- highlight, list and search todo comments in your projects
-    "folke/todo-comments.nvim",
+  {
+    "folke/todo-comments.nvim",                   -- highlight, list and search todo comments in your projects
     config = function()
       local ok, todo = pcall(require, "todo-comments")
       if ok then
