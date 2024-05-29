@@ -51,6 +51,7 @@ local sources = {
   "plugins/telescope",
   "plugins/terminal",
   "plugins/spectre",
+  "plugins/dap",
 
   -- [[ Language Specific ]] --
   "languages/bash",
