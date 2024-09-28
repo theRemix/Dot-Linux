@@ -26,8 +26,6 @@ Resources
 
 --]]
 
-
-
 local sources = {
   "core/plugins",
   "core/options",
@@ -63,6 +61,7 @@ local sources = {
   -- "languages/terraform",
   -- "languages/typescript",
   -- "languages/typescriptreact",
+  "lsp/clang",
 }
 
 for _, source in ipairs(sources) do
