@@ -116,10 +116,10 @@ local mappings = {
   ["H"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
 
   -- maps <leader>(direction) keys
-  ["h"] = { "<cmd>HopWordBC<CR>", "" },         -- Hop ←
+  ["h"] = { "<cmd>HopCamelCaseBC<CR>", "" },         -- Hop ←
   ["j"] = { "<cmd>HopVerticalAC<CR>", "" },     -- Hop ↑
   ["k"] = { "<cmd>HopVerticalBC<CR>", "" },     -- Hop ↓
-  ["l"] = { "<cmd>HopWordAC<CR>", "" },         -- Hop →
+  ["l"] = { "<cmd>HopCamelCaseAC<CR>", "" },         -- Hop →
 
   -- Telescope
   ["f"] = {

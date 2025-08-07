@@ -5,9 +5,10 @@ if not set -q __fish_path_set
   set -g -x EDITOR /opt/nvim-linux64/bin/nvim
   set -g -x GIT_EDITOR $EDITOR
   set -g -x GOPATH ~/.gopath
+  set -g -x GOBIN $GOPATH/bin
 
   # for dap-install jsnode
   set -g -x NODE_OPTIONS --no-experimental-fetch
 
-  set -U fish_user_paths ~/.local/bin $GOPATH/bin ~/.fzf/bin ~/.config/fnm/bin /usr/local/go/bin /opt/nvim-linux64/bin
+  set -U fish_user_paths ~/.local/bin $GOBIN ~/.fzf/bin ~/.config/fnm/bin /usr/local/go/bin /opt/nvim-linux64/bin
 end

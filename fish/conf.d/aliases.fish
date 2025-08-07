@@ -42,3 +42,30 @@ alias gco='git checkout'
 alias gm='git merge'
 alias gll='git log --graph --decorate --all --stat --color'
 alias gdt='git difftool'
+
+alias glances="docker run --rm -v /var/run/docker.sock:/var/run/docker.sock:ro --pid host --network host -it docker.io/nicolargo/glances"
+
+# sapling
+alias s='sl'
+alias sts='sl st'
+alias sd='sl diff'
+alias sg='sl goto'
+# alias sgp='sl goto && sl pull'
+function sgp --wraps sl --description 'alias sgp=sl pull && sl goto "$@"'
+  sl pull && sl goto "$argv"
+end
+alias sgm='sl goto main'
+alias sgmp='sl pull && sl goto main'
+alias sgmm='sl goto master'
+alias sgmmp='sl pull && sl goto master'
+alias sp='sl pull'
+alias sr='sl pull && sl rebase -d'
+alias srm='sl pull && sl rebase -d remote/main'
+alias srmm='sl pull && sl rebase -d remote/master'
+alias slap='sl amend && sl pr s'
+alias slep='sl amend -e && sl pr s'
+alias sprs='sl pr s'
+
+alias aus="env TZ=:Australia/Brisbane date"
+
+alias fcd="cd (find * -type d | fzf)"
