@@ -1,6 +1,14 @@
 require("nvchad.configs.lspconfig").defaults()
 
-local servers = { "html", "cssls" }
+local servers = { "html", "cssls", "pyright" }
 vim.lsp.enable(servers)
 
+-- Optional: force inline diagnostics
+-- vim.diagnostic.config({
+--   virtual_text = true,
+--   signs = true,
+--   underline = true,
+--   update_in_insert = false,
+-- })
+--
 -- read :h vim.lsp.config for changing options of lsp servers 
