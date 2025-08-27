@@ -138,14 +138,45 @@ return {
     end
   },
 
-  --
-  -- {
-  -- 	"nvim-treesitter/nvim-treesitter",
-  -- 	opts = {
-  -- 		ensure_installed = {
-  -- 			"vim", "lua", "vimdoc",
-  --      "html", "css"
-  -- 		},
-  -- 	},
-  -- },
+  {
+      "nvim-treesitter/nvim-treesitter",
+      opts = {
+          ensure_installed = {
+              "c", "lua", "vim", "vimdoc", "query", "markdown", "markdown_inline",
+              "go",  -- For Go language syntax highlighting
+              "gomod", -- For Go module files (go.mod)
+              "gowork", -- For Go workspace files (go.work)
+              "gotmpl", -- For Go templates
+          },
+          -- ... (other Treesitter options)
+      },
+      config = function(_, opts)
+          require("nvim-treesitter.configs").setup(opts)
+      end,
+  },
+
+  {
+    "ray-x/go.nvim", -- The go.nvim plugin itself
+    dependencies = {
+        "neovim/nvim-lspconfig", -- For Go's Language Server Protocol (LSP) gopls
+        "nvim-treesitter/nvim-treesitter", -- For syntax highlighting
+        "mfussenegger/nvim-dap", -- For Debug Adapter Protocol (DAP) client
+        "leoluz/nvim-dap-go", -- For integrating nvim-dap with Go's Delve debugger
+        "rcarriga/nvim-dap-ui", -- For DAP user interface
+        "nvim-neotest/nvim-nio", -- Required for nvim-dap-go functionality
+        -- Other dependencies you might use, like nvim-cmp for completion
+    },
+    ft = { "go", "gomod" }, -- Configure go.nvim to be loaded only for Go filetypes
+    build = ":GoInstallBinaries", -- Automatically install Go binaries on setup
+    config = function()
+        require("go").setup({
+            -- You can customize go.nvim settings here, e.g.,
+            goimport_autosave = true,
+            format_onsave = {
+                enabled = true,
+                commands = { "GoImports" },
+            }
+        })
+    end,
+}
 }
